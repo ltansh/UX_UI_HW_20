@@ -138,7 +138,6 @@ nav {
 .logoSprite {
     grid-area: img;
     border-bottom: solid 1px #212121;
-    padding-bottom: 30px;
     margin-right: 60px;
     margin-top: 40px;
     width: 362px;
@@ -181,9 +180,139 @@ nav {
     text-align: center;
 }
 
-/* Intro Content */
+/* Carousel Content */
 
-#intro {
+/* Case Study Intro Content */
+
+.caseStudytitle {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.caseStudytitle h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 100%;
+}
+
+.caseStudytitle h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    line-height: 100%;
+}
+
+.caseStudydetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "team deliverables tools";
+    gap: 40px;
+}
+
+.caseStudydetails li {
+    display: inline;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#team {
+    grid-area: team;
+}
+
+#deliverables {
+    grid-area: deliverables;
+}
+
+#tools {
+    grid-area: tools;
+}
+
+/* Project Overview Content */
+
+.overviewContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.largeImg img {
+    width: 100%;
+}
+
+.textContent {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.textContent p {
+    line-height: 1.75em;
+}
+
+/* Roles Content */
+
+#roles {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cardContainer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "ux ui projectMgmt";
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.cardText {
+    margin-top: 40px;
+}
+
+#ux {
+    grid-area: ux;
+    display: flex;
+    flex-direction: column;
+}
+
+#ui {
+    grid-area: ui;
+    display: flex;
+    flex-direction: column;
+}
+
+#projectMgmt {
+    grid-area: projectMgmt;
+    display: flex;
+    flex-direction: column;
+}
+/* #intro {
 
     display: grid;
     grid-area: intro;
@@ -208,7 +337,6 @@ nav {
 #aboutText {
     grid-area: aboutText;
     margin-top: 20px;
-    /* margin: auto 0; */
 }
 
 #aboutText h1 {
@@ -220,11 +348,11 @@ nav {
 #aboutText p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    }
+    } */
 
 /* Skills Content */
 
-#skills {
+/* #skills {
     grid-area: skills;
 }
 
@@ -291,7 +419,7 @@ h2 {
     padding-left: 5px;
     display: inline-block;
     vertical-align: middle;
-}
+} */
 
 /* Work Content */
 
@@ -302,62 +430,7 @@ h2 {
     flex-direction: column; */
 }
 
-#caseStudies {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "naba skippr cs3"
-    "cs4 cs5 cs6";
-    gap: 40px;
-}
 
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.card img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: all 0.5s ease-in-out;
-}
-
-.card img:hover {
-    transform: scale(1.3);
-    cursor: pointer;
-}
-
-.cardText {
-    /* width: 100%; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-#naba {
-    grid-area: naba;
-    display: flex;
-    flex-direction: column;
-}
-
-#skippr {
-    grid-area: skippr;
-    display: flex;
-    flex-direction: column;
-}
-
-#cs3 {
-    grid-area: cs3;
-    display: flex;
-    flex-direction: column;
-}
 
 #cs4 {
     grid-area: cs4;
