@@ -1,3 +1,7 @@
+:root {
+    --column-gap: 40px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -241,6 +245,12 @@ nav {
 
 .largeImg img {
     width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.largeImg img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
 .textContent {
@@ -250,6 +260,15 @@ nav {
 
 .textContent p {
     line-height: 1.75em;
+}
+
+.imgCaption {
+    margin-top: 20px;
+}
+
+.imgCaption p {
+    font-size: 14px;
+    font-style: italic;
 }
 
 /* Roles Content */
@@ -271,6 +290,7 @@ nav {
 }
 
 .card {
+    grid-area: smallImg;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -312,6 +332,110 @@ nav {
     display: flex;
     flex-direction: column;
 }
+
+/* Research Content */
+
+/* .imgContainer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "medImg medImg smallImg";
+    gap: 40px;
+}
+
+.medImg {
+    grid-area: medImg;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.medImg img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.medImg img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+} */
+
+
+.container, .container-fluid {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: none;
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+}
+
+ .col-sm-8 {
+    width: 100%;
+    height: 100%;
+}
+
+.col-sm-8 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.col-sm-4{
+    width: 100%;
+    height: 100%;
+}
+
+.col-sm-4 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.row {
+    column-gap: var(--column-gap);
+}
+
+@media screen and (width > 576px) {
+    .col-sm-8 {
+        flex: 0 0 calc(66.67% - var(--column-gap) / 2);
+
+    } 
+
+    .col-sm-4 {
+        flex: 0 0 calc(33.33% - var(--column-gap) / 2);
+        
+    } 
+}
+
+:is(.col-sm-8, .col-sm-4) {
+    overflow: clip;
+}
+
+:is(.col-sm-8, .col-sm-4) img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+:is(.col-sm-8, .col-sm-4) img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+  
 /* #intro {
 
     display: grid;
