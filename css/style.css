@@ -46,7 +46,6 @@ section {
     background-color: #F2994A;
 }
 
-
 .roundedFixedBtn img {
     width: 32px;
     height: 32px;
@@ -83,6 +82,11 @@ button {
 .btnContent:hover {
     background-color: #F2994A;
     padding-left: 50px;
+    }
+
+.btnContent a:hover {
+    text-decoration: none;
+    color: #FAFBF1;
     }
 
 .iconHidden {
@@ -284,9 +288,22 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "ux ui projectMgmt";
+    "uxRole uiRole pmRole";
     gap: 40px;
     align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+#uxRole {
+    grid-area: uxRole;
+}
+
+#uiRole {
+    grid-area: uiRole;
+}
+
+#pmRole {
+    grid-area: pmRole;
 }
 
 .card {
@@ -554,7 +571,26 @@ h2 {
     flex-direction: column; */
 }
 
+.caseStudies {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "skippr cs3 cs4"
+    "cs5 cs6 goBackhome";
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    background-color: none;
+}
 
+.caseStudies > .cardText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 40px;
+}
 
 #cs4 {
     grid-area: cs4;
@@ -572,6 +608,12 @@ h2 {
     grid-area: cs6;
     display: flex;
     flex-direction: column;
+}
+
+#goBackhome {
+    grid: goBackhome;
+    background-color: none;
+    outline: none;
 }
 
 .cardText h3 {
